@@ -112,12 +112,13 @@ button { color: inherit; }
 .finish-label { color: #5a6169; font-size: 10px; text-transform: uppercase; letter-spacing: .15em; }
 .finish-control strong { font-size: 14px; }
 .finish-options { display: flex; gap: 9px; }
-.finish-button { position: relative; width: 26px; height: 26px; padding: 0; border: 1px solid rgba(13,15,18,.25); border-radius: 50%; cursor: pointer; }
+.finish-button { position: relative; width: 44px; height: 44px; padding: 8px; border: 1px solid transparent; border-radius: 50%; cursor: pointer; }
+.finish-button::before { content: ""; display: block; width: 26px; height: 26px; border: 1px solid rgba(13,15,18,.25); border-radius: 50%; }
 .finish-button::after { content: ""; position: absolute; inset: -5px; border: 1px solid transparent; border-radius: 50%; transition: border-color .2s; }
 .finish-button[aria-pressed="true"]::after { border-color: var(--ink); }
-.finish-silver { background: linear-gradient(135deg, #f1f3f4, #9299a1); }
-.finish-graphite { background: linear-gradient(135deg, #4b5158, #121519); }
-.finish-white { background: linear-gradient(135deg, #fff, #d9dde1); }
+.finish-silver::before { background: linear-gradient(135deg, #f1f3f4, #9299a1); }
+.finish-graphite::before { background: linear-gradient(135deg, #4b5158, #121519); }
+.finish-white::before { background: linear-gradient(135deg, #fff, #d9dde1); }
 
 .feature-section { padding-top: var(--section-space); padding-bottom: var(--section-space); }
 .section-intro { max-width: 820px; margin-bottom: clamp(54px, 7vw, 100px); }
@@ -294,7 +295,7 @@ blockquote cite { display: block; margin-top: 28px; color: var(--muted); font-st
 }
 
 @media (max-width: 640px) {
-    :root { --gutter: 20px; --section-space: 96px; }
+    :root { --gutter: 16px; --section-space: 88px; }
     .hero { grid-template-rows: auto minmax(390px, 46svh); }
     .hero-content { padding-top: 52px; }
     .eyebrow { margin-bottom: 20px; font-size: 9px; }
@@ -307,12 +308,12 @@ blockquote cite { display: block; margin-top: 28px; color: var(--muted); font-st
     .product-stage img { width: 100%; object-position: center; }
     .section-intro { margin-bottom: 46px; }
     .section-intro h2, .spec-heading h2 { font-size: 40px; }
-    .feature { min-height: 330px; }
-    .feature-primary { min-height: 520px; }
+    .feature { min-height: 260px; padding: 28px 24px; }
+    .feature-primary { min-height: 410px; }
     .sound-orbit { width: 320px; }
-    .feature-material { grid-template-columns: 1fr; min-height: 440px; }
+    .feature-material { grid-template-columns: 1fr; min-height: 320px; gap: 18px; }
     .feature-material > div { justify-self: start; }
-    .material-word { align-self: start; font-size: clamp(72px, 24vw, 140px); line-height: .78; white-space: nowrap; }
+    .material-word { align-self: start; font-size: clamp(72px, 22vw, 112px); line-height: .78; white-space: nowrap; }
     .spec-panel { border-radius: 12px; }
     .spec-product { min-height: 340px; }
     .spec-product img { inset: 0; width: 100%; height: 100%; }
