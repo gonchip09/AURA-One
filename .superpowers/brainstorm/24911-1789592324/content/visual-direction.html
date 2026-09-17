@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — Dirección visual</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#080a0d;color:#f4f7fa;font-family:Arial,Helvetica,sans-serif}.page{max-width:1500px;margin:auto;padding:42px}.top{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.top h1{font-size:clamp(32px,4vw,60px);letter-spacing:-.05em;margin:0;max-width:780px;line-height:.95}.top p{color:#8e98a3;max-width:420px;line-height:1.5;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #272c33;background:#0d1014;cursor:pointer;transition:.25s;overflow:hidden}.card:hover,.card.selected{transform:translateY(-5px);border-color:#00ddea;box-shadow:0 18px 60px #00ddea18}.preview{height:420px;position:relative;overflow:hidden;padding:28px}.preview nav{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.18em;position:relative;z-index:3}.copy{position:absolute;left:28px;right:28px;bottom:30px;z-index:3}.copy h2{font-size:34px;letter-spacing:-.05em;line-height:.96;margin:0 0 14px;max-width:310px}.copy p{font-size:12px;line-height:1.5;max-width:240px;margin:0 0 18px;color:#aab0b8}.button{display:inline-block;background:#00e2eb;color:#041012;padding:10px 14px;font-size:10px;font-weight:800}.product{position:absolute;border-radius:50%;border:18px solid #232930;width:220px;height:220px;right:-25px;top:70px;box-shadow:inset 0 0 0 5px #080a0d,0 30px 70px #000;transform:rotate(-18deg)}.product:before,.product:after{content:"";position:absolute;background:#353c45;border-radius:50%;width:95px;height:125px;top:30px}.product:before{left:-40px}.product:after{right:-40px}.meta{padding:20px 22px 24px}.meta h3{font-size:16px;margin:0 0 8px}.meta p{color:#8e98a3;font-size:13px;line-height:1.5;margin:0}.b .preview{background:#dfe3e7;color:#0a0c0e}.b .preview nav{color:#171a1d}.b .product{border-color:#aab2ba;box-shadow:inset 0 0 0 5px #f3f4f5,0 30px 60px #60708055}.b .product:before,.b .product:after{background:#c2c8ce}.b .copy p{color:#4d555e}.b .button{background:#111;color:#fff}.c .preview{background:radial-gradient(circle at 75% 28%,#34235c 0,#130e21 30%,#07080a 70%)}.c .product{border-color:#6040c6;box-shadow:inset 0 0 0 5px #17111f,0 0 90px #7548ff88}.c .product:before,.c .product:after{background:#2e2442}.c .button{background:#815bff;color:#fff}.tag{display:inline-flex;margin-top:16px;border:1px solid #343a42;color:#b4bdc6;padding:6px 9px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.hint{color:#75808a;font-size:12px;margin-top:22px}.selected:after{content:"SELECCIONADA";position:absolute}.card{position:relative}.card.selected:after{top:10px;right:10px;background:#00e2eb;color:#071013;padding:7px 9px;font-size:9px;font-weight:900;letter-spacing:.1em}.c.selected:after{background:#815bff;color:#fff}@media(max-width:900px){.page{padding:24px}.top{display:block}.top p{margin-top:18px}.grid{grid-template-columns:1fr}.preview{height:380px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top"><h1>¿Qué personalidad debe tener AURA?</h1><p>Las tres mantienen el producto premium y tecnológico. Cambian la temperatura, el contraste y la manera de contar la innovación.</p></div>
+    <section class="grid">
+      <article class="card a" data-choice="a-cyan-precision" onclick="toggleSelect(this)">
+        <div class="preview"><nav><b>AURA</b><span>01 / 04</span></nav><div class="product"></div><div class="copy"><h2>El sonido que se adapta.</h2><p>Ingeniería acústica, silencio inteligente y un pulso cian preciso.</p><span class="button">RESERVAR AHORA</span></div></div>
+        <div class="meta"><h3>A — Precisión cian</h3><p>Carbón, cromo y cian eléctrico. Cinemática, técnica y con mucha presencia de producto.</p><span class="tag">Recomendada</span></div>
+      </article>
+      <article class="card b" data-choice="b-cold-luxury" onclick="toggleSelect(this)">
+        <div class="preview"><nav><b>AURA</b><span>SMART SOUND</span></nav><div class="product"></div><div class="copy"><h2>Silencio, elevado.</h2><p>Una expresión más luminosa y editorial inspirada en diseño industrial.</p><span class="button">DESCUBRIR</span></div></div>
+        <div class="meta"><h3>B — Lujo frío</h3><p>Plata, humo y negro. Más Apple-like, calmada y refinada; menos gamer, más objeto de diseño.</p></div>
+      </article>
+      <article class="card c" data-choice="c-violet-immersive" onclick="toggleSelect(this)">
+        <div class="preview"><nav><b>AURA</b><span>IMMERSIVE 360</span></nav><div class="product"></div><div class="copy"><h2>Dentro de tu propio mundo.</h2><p>Una experiencia más sensorial, nocturna y envolvente.</p><span class="button">PRE-ORDER</span></div></div>
+        <div class="meta"><h3>C — Inmersión violeta</h3><p>Negro profundo y luz violeta. Más expresiva, futurista y emocional; menos técnica.</p></div>
+      </article>
+    </section>
+    <p class="hint">Haz clic sobre una opción. Puedes cambiar la selección antes de responder.</p>
+  </main>
+</body>
+</html>
